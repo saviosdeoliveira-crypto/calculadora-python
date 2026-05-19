@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.calculadora {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.display {
+    margin-bottom: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 32px;
+    border: none;
+    background: #f0f0f0;
+    border-radius: 8px;
+    text-align: right;
+    color: #333;
+    font-weight: bold;
+}
+
+#display:focus {
+    outline: 2px solid #667eea;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #e0e0e0;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background: #d0d0d0;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn-funcao {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btn-funcao:hover {
+    background: #ff5252;
+}
+
+.btn-operador {
+    background: #667eea;
+    color: white;
+}
+
+.btn-operador:hover {
+    background: #5568d3;
+}
+
+.btn-igual {
+    grid-column: span 2;
+    background: #51cf66;
+    color: white;
+    font-size: 20px;
+}
+
+.btn-igual:hover {
+    background: #40c057;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+.btn-ponto {
+    background: #e0e0e0;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+    .calculadora {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    #display {
+        font-size: 24px;
+        padding: 15px;
+    }
+}
