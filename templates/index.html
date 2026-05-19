@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            <div class="display">
+                <input type="text" id="display" placeholder="0" readonly>
+            </div>
+            <div class="botoes">
+                <button class="btn btn-funcao" onclick="limpar()">C</button>
+                <button class="btn btn-funcao" onclick="deletar()">←</button>
+                <button class="btn btn-operador" onclick="adicionarOperador('/')">/</button>
+                <button class="btn btn-operador" onclick="adicionarOperador('*')">×</button>
+
+                <button class="btn" onclick="adicionarNumero('7')">7</button>
+                <button class="btn" onclick="adicionarNumero('8')">8</button>
+                <button class="btn" onclick="adicionarNumero('9')">9</button>
+                <button class="btn btn-operador" onclick="adicionarOperador('-')">-</button>
+
+                <button class="btn" onclick="adicionarNumero('4')">4</button>
+                <button class="btn" onclick="adicionarNumero('5')">5</button>
+                <button class="btn" onclick="adicionarNumero('6')">6</button>
+                <button class="btn btn-operador" onclick="adicionarOperador('+')">+</button>
+
+                <button class="btn" onclick="adicionarNumero('1')">1</button>
+                <button class="btn" onclick="adicionarNumero('2')">2</button>
+                <button class="btn" onclick="adicionarNumero('3')">3</button>
+                <button class="btn btn-ponto" onclick="adicionarNumero('.')">.</button>
+
+                <button class="btn btn-zero" onclick="adicionarNumero('0')">0</button>
+                <button class="btn btn-igual" onclick="calcular()">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
